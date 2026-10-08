@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.zip
+.aws-sam/
+# Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.vite-temp/
+
+# Lambda build directories
+lambda_build/
+pillow_layer/
+pillow_layer_v2/
+pillow_layer_v3/
+lambda_app/
+
+# IDE
+.vscode/
+.idea/
