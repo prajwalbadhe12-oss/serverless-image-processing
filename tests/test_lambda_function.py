@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock, patch
 
-from lambda_src.lambda_function import (
+from lambda_function import (
     process_s3_record,
 )
 
@@ -25,10 +25,10 @@ def test_non_upload_file_is_skipped():
 
 
 @patch(
-    "lambda_src.lambda_function.s3_client"
+    "lambda_function.s3_client"
 )
 @patch(
-    "lambda_src.lambda_function.process_image"
+    "lambda_function.process_image"
 )
 def test_s3_image_processing(
     mock_process_image,

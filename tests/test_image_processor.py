@@ -3,7 +3,7 @@ from io import BytesIO
 import pytest
 from PIL import Image
 
-from lambda_src.image_processor import (
+from image_processor import (
     process_image,
     resize_image,
     validate_image,
@@ -63,7 +63,7 @@ def test_resize_image():
 
     image = validate_image(image_bytes)
 
-    resized_bytes = resize_image(
+    resized_bytes, _, _ = resize_image(
         image,
         (200, 200),
     )
